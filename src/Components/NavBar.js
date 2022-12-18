@@ -12,8 +12,12 @@ export const NavBar = () => {
                     Cilkicks
                 </Typography>
                 
-                <Button component={NavLink} to='/'>Home</Button>
-                <Button component={NavLink} to='/contact'>Contact US</Button>
+                <Button component={NavLink} to='/' style={({isActive})=>{
+                                                             return {backgroundColor: isActive?'red':''}}} 
+                sx={{color:'white'}}>Home</Button>
+                <Button component={NavLink} to='/contact' style={({isActive})=>{
+                                                                return {backgroundColor: isActive?'red':''}}} 
+                sx={{color:'white'}}>Contact US</Button>
            
             </Toolbar>
         </AppBar>
