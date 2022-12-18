@@ -5,8 +5,8 @@ export const NavBar = () => {
   return (
     <>
       <Box sx={{flexGrow:1,
-                backgroundColor: 'primary.dark',}}>
-        <AppBar position='static' color='secondary'>
+               }}>
+        <AppBar position='static' style={{backgroundColor:'green'}}>
             <Toolbar>
                 <Typography variant='h5' component='div' sx={{flexGrow:1}}>
                     Cilkicks
@@ -14,11 +14,13 @@ export const NavBar = () => {
                 
                 <Button component={NavLink} to='/' style={({isActive})=>{
                                                              return {backgroundColor: isActive?'red':''}}} 
-                sx={{color:'white'}}>Home</Button>
+                sx={{color:'white',textTransform:'none'}}>Home</Button>
                 <Button component={NavLink} to='/contact' style={({isActive})=>{
                                                                 return {backgroundColor: isActive?'red':''}}} 
-                sx={{color:'white'}}>Contact US</Button>
-           
+                sx={{color:'white',textTransform:'none'}}>Contact US</Button>
+                 <Button component={NavLink} to='/login' style={({isActive})=>{
+                                                                return {backgroundColor: isActive?'red':''}}} 
+                sx={{color:'white',textTransform:'none'}}>Login Register</Button>
             </Toolbar>
         </AppBar>
       
