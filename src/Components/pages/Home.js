@@ -1,7 +1,12 @@
 import React from 'react'
 
 export const Home = () => {
-  return (
-    <div>HomePage</div>
+
+    return (
+    <>
+       <h1>Home page</h1>
+       <hr/>
+        <p>lorem100</p>
+    </>
   )
 }
