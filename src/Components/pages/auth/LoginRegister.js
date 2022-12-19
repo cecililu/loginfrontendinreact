@@ -41,18 +41,20 @@ export const LoginRegister = () => {
                     backgroundImage:`url(${image})`,
                     backgroundRepeat:'no-repeat',
                     backgroundSize:'cover',
-                    backgroundPosition:'center'
+                    backgroundPosition:'center',
+                    display:  {xs:'none', sm:'block'}
+
                     }}> 
            
         </Grid>
-        <Grid item lg={5} sm={7} 
+        <Grid item lg={5} sm={7} xs={12}
                 sx={{
                    
                     }}> 
                 
             <Card sx={{width:'100%',height:'100%',backgroundColor:'white'}}>
                 <Box>
-                    <Box sx={{borderTop:1,borderBottom:1,borderColor:'divider'}}> 
+                    <Box sx={{borderTop:1,borderBottom:1,borderColor:'divider',padding:2}}> 
                         <Tabs value={value} onChange={handlechange}> 
                             <Tab label="Login" sx={{textTransform:'none',fontWeight:'bold'}}></Tab>
                             <Tab label="Registrations"  sx={{textTransform:'none',fontWeight:'bold'}}></Tab>      
