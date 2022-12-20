@@ -58,7 +58,7 @@ export const Registration = () => {
       <TextField margin='normal' required fullWidth id='name' name='name' label="Name"/>
       <TextField margin='normal'  required fullWidth id='password' name='password' label="Password" type='password'/>
       <TextField margin='normal'  required fullWidth id='password2' name='password2' label="Re-enter Password" type='password'/>
-       <FormControlLabel sx={{m:1}} label='I agree all the terms and conditions' control={<CheckBox value='agree' color='primary' name='tc' id='tc' />}></FormControlLabel>
+       <FormControlLabel sx={{my:1}} label='I agree all the terms and conditions' control={<CheckBox value='agree' color='primary' name='tc' id='tc' />}></FormControlLabel>
        {errorMsg.msg ? <Alert severity={errorMsg.status ?'error':'success'}>{errorMsg.msg}</Alert>:'' }
        
        <Box textAlign='center'>

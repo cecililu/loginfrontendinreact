@@ -48,7 +48,7 @@ export const Login = () => {
         <Button sx={{mt:2,mb:2,px:5}} type='submit' variant='contained'>Login</Button>
       
        </Box>
-       <NavLink to='/' >forgot pasword ?</NavLink>
+       <NavLink to='/forgotpassord' >forgot pasword ?</NavLink>
       
     </Box>
   )

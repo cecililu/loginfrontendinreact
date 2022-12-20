@@ -4,6 +4,7 @@ import { Layout } from "./Components/pages/Layout";
 import { Home } from "./Components/pages/Home";
 import { Contact } from "./Components/pages/Contact";
 import { LoginRegister } from "./Components/pages/auth/LoginRegister";
+import { SendPasswordResetEmail } from "./Components/pages/auth/SendPasswordResetEmail";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
                 <Route index element={<Home/>}/>
                 <Route  path='contact' element={<Contact/>}/>
                 <Route  path='login' element={<LoginRegister/>}/>
+                <Route  path='forgotpassord' element={<SendPasswordResetEmail/>}/>
             </Route>
           </Routes>
         </BrowserRouter>  
