@@ -1,8 +1,7 @@
 import { FormatAlignJustify } from '@mui/icons-material'
 import { Box,Alert, Button, TextField, Typography } from '@mui/material'
-import { flexbox } from '@mui/system'
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink,useNavigate } from 'react-router-dom'
 
 
 export const Login = () => {
@@ -11,6 +10,7 @@ export const Login = () => {
         msg:'',
         type:'',
      })
+     const navigate=useNavigate()
      const handleSubmit=(e)=>{
         e.preventDefault()  
         const data=new FormData(e.currentTarget)
@@ -28,6 +28,7 @@ export const Login = () => {
               msg:'Login Success',
               type:'',
            })
+           navigate('/')
         }else{
              seterrorMsg({
               status:true,
@@ -41,7 +42,6 @@ export const Login = () => {
     }
     return (
     <Box component='form' onSubmit={handleSubmit} noValidate sx={{ paddingTop:2}} id='login-form'>
-    
       <TextField margin='normal' required fullWidth id='email' name='email' label="Email Address"/>
       <TextField margin='normal'  required fullWidth id='password' name='password' label="Password" type='password'/>
        {errorMsg.msg ? <Alert severity={errorMsg.status ?'error':'success'}>{errorMsg.msg}</Alert>:'' }
