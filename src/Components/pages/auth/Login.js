@@ -1,4 +1,3 @@
-import { FormatAlignJustify } from '@mui/icons-material'
 import { Box,Alert, Button, TextField, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import { NavLink,useNavigate } from 'react-router-dom'
@@ -36,8 +35,7 @@ export const Login = () => {
               type:'',
            })
             
-        }
-        
+        }    
     
     }
     return (
