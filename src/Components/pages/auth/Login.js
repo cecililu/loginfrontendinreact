@@ -5,24 +5,35 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 
-
-
 export const Login = () => {
-     const [errorMsg, seterrorMsg] = useState('')
+     const [errorMsg, seterrorMsg] = useState({
+        status:null,
+        msg:'',
+        type:'',
+     })
      const handleSubmit=(e)=>{
         e.preventDefault()  
-        const data=new FormData(e.currentTaget)
+        const data=new FormData(e.currentTarget)
         const data_pack={
             
             email:data.get('email'),
             password:data.get('password')
         }  
+        console.log(data_pack)
         if(data_pack.email && data_pack.password){
-            console.log(data_pack)
+            // console.log(data_pack)
             document.getElementById('login-form').reset()
-
+            seterrorMsg({
+              status:false,
+              msg:'Login Success',
+              type:'',
+           })
         }else{
-             seterrorMsg('All fields are required')
+             seterrorMsg({
+              status:true,
+              msg:'All fields are required',
+              type:'',
+           })
             
         }
         
@@ -33,7 +44,7 @@ export const Login = () => {
     
       <TextField margin='normal' required fullWidth id='email' name='email' label="Email Address"/>
       <TextField margin='normal'  required fullWidth id='password' name='password' label="Password" type='password'/>
-      <Typography  sx={{ color:'red',m:2}}component='p'>{ errorMsg?errorMsg:''}</Typography>    
+      <Alert severity={errorMsg.status ?'error':'success'}>{errorMsg.msg}</Alert> 
        <Box textAlign='center'>
       
         <Button sx={{mt:2,mb:2,px:5}} type='submit' variant='contained'>Login</Button>
