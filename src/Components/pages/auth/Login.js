@@ -44,7 +44,7 @@ export const Login = () => {
     
       <TextField margin='normal' required fullWidth id='email' name='email' label="Email Address"/>
       <TextField margin='normal'  required fullWidth id='password' name='password' label="Password" type='password'/>
-      <Alert severity={errorMsg.status ?'error':'success'}>{errorMsg.msg}</Alert> 
+       {errorMsg.msg ? <Alert severity={errorMsg.status ?'error':'success'}>{errorMsg.msg}</Alert>:'' }
        <Box textAlign='center'>
       
         <Button sx={{mt:2,mb:2,px:5}} type='submit' variant='contained'>Login</Button>
