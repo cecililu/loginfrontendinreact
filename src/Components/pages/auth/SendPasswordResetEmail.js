@@ -41,7 +41,7 @@ return (
     <Grid item sm={6} xs={12}  textAlign='center'>
         <Typography variant="h6" component="h2" sx={{mt:5}}>Password Reset</Typography>
      <Box component='form' onSubmit={handleSubmit} noValidate sx={{ paddingTop:1}} id='login-form'>
-     <TextField margin='normal' required fullWidth id='email' name='email' label="Email Address"/>
+     <TextField sx={{mx:2}}margin='normal' required fullWidth id='email' name='email' label="Email Address"/>
      {errorMsg.msg ? <Alert severity={errorMsg.status ?'error':'success'}>{errorMsg.msg}</Alert>:'' }
  
      <Box textAlign='center'>
