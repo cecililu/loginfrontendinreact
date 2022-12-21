@@ -26,7 +26,7 @@ export const ResetPasswordForm = () => {
             document.getElementById('regis-form').reset()
             seterrorMsg({
               status:false,
-              msg:'Password Reset Succesfull.You will be redirected to home page',
+              msg:'Password Reset Succesfull.You will be redirected',
               type:'',
            })
            setTimeout(()=>{
@@ -55,7 +55,7 @@ export const ResetPasswordForm = () => {
                 <Box component='form' onSubmit={handleSubmit} noValidate sx={{ paddingTop:2}} id='password-form'>
                 <TextField margin='normal'  required fullWidth id='password' name='password' label="Password" type='password'/>
                 <TextField margin='normal'  required fullWidth id='password2' name='password2' label="Re-enter Password" type='password'/>
-                
+                {errorMsg.msg ? <Alert severity={errorMsg.status ?'error':'success'}>{errorMsg.msg}</Alert>:'' }
                 <Box textAlign='center'>
                 
                     <Button sx={{mt:2,mb:2,px:5}} type='submit' variant='contained'>Reset Password</Button>
