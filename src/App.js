@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Layout } from "./Components/pages/Layout";
 import { Home } from "./Components/pages/Home";
+
 import { Contact } from "./Components/pages/Contact";
 import { LoginRegister } from "./Components/pages/auth/LoginRegister";
 import { SendPasswordResetEmail } from "./Components/pages/auth/SendPasswordResetEmail";

@@ -26,10 +26,13 @@ export const ResetPasswordForm = () => {
             document.getElementById('regis-form').reset()
             seterrorMsg({
               status:false,
-              msg:'Password Reset Succesfull',
+              msg:'Password Reset Succesfull.You will be redirected to home page',
               type:'',
            })
-           navigate('/')
+           setTimeout(()=>{
+            navigate('/')
+           },3000)
+           
         }else{
              
        
