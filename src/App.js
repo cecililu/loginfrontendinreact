@@ -18,7 +18,7 @@ function App() {
                 <Route  path='contact' element={<Contact/>}/>
                 <Route  path='login' element={<LoginRegister/>}/>
                 <Route  path='forgotpassord' element={<SendPasswordResetEmail/>}/>
-                <Route  path='resetpassword' element={<ResetPasswordForm/>}/>
+                <Route  path='resetpassword/:token' element={<ResetPasswordForm/>}/>
             </Route>
           </Routes>
         </BrowserRouter>  
