@@ -1,10 +1,11 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, CssBaseline, Typography } from '@mui/material';
 import { purple } from '@mui/material/colors';
 export const PageNotFound = () => {
 const primary = purple[500]; 
     return (
-        <Box
+        <CssBaseline>
+         <Box   
           sx={{
             display: 'flex',
             justifyContent: 'center',
@@ -20,6 +21,8 @@ const primary = purple[500];
             Page not Found
           </Typography>
         </Box>
+        </CssBaseline>
+        
       );
   
 }
