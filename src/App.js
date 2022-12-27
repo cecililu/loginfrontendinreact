@@ -7,6 +7,8 @@ import { Contact } from "./Components/pages/Contact";
 import { LoginRegister } from "./Components/pages/auth/LoginRegister";
 import { SendPasswordResetEmail } from "./Components/pages/auth/SendPasswordResetEmail";
 import { ResetPasswordForm } from "./Components/pages/auth/ResetPasswordForm";
+import { Dashboard } from "./Components/pages/Dashboard";
+
 
 
 function App() {
@@ -20,7 +22,9 @@ function App() {
                 <Route  path='login' element={<LoginRegister/>}/>
                 <Route  path='forgotpassord' element={<SendPasswordResetEmail/>}/>
                 <Route  path='resetpassword/:token' element={<ResetPasswordForm/>}/>
+                
             </Route>
+            <Route  path='dashboard' element={<Dashboard/>}/>
           </Routes>
         </BrowserRouter>  
     </div>

@@ -42,12 +42,9 @@ return (
         <Typography variant="h6" component="h2" sx={{mt:5}}>Password Reset</Typography>
      <Box component='form' onSubmit={handleSubmit} noValidate sx={{ paddingTop:1}} id='login-form'>
      <TextField sx={{mx:2}} margin='normal' required fullWidth id='email' name='email' label="Email Address"/>
-     
      {errorMsg.msg ? <Alert sx={{mx:3}} severity={errorMsg.status ?'error':'success'}>{errorMsg.msg}</Alert>:'' }
-     <Box textAlign='center'>
-    
-    <Button sx={{mt:2,mb:2,px:5}} type='submit' variant='contained'>Send Email</Button>
-  
+     <Box textAlign='center'> 
+    <Button sx={{mt:2,mb:2,px:5}} type='submit' variant='contained'>Send Email</Button> 
    </Box>
    
   

@@ -27,7 +27,7 @@ export const Login = () => {
               msg:'Login Success',
               type:'',
            })
-           navigate('/')
+           navigate('/dashboard')
         }else{
              seterrorMsg({
               status:true,
