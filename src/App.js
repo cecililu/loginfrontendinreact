@@ -8,6 +8,7 @@ import { LoginRegister } from "./Components/pages/auth/LoginRegister";
 import { SendPasswordResetEmail } from "./Components/pages/auth/SendPasswordResetEmail";
 import { ResetPasswordForm } from "./Components/pages/auth/ResetPasswordForm";
 import { Dashboard } from "./Components/pages/Dashboard";
+import { PageNotFound } from "./Components/pages/auth/PageNotFound";
 
 
 
@@ -25,6 +26,7 @@ function App() {
                 
             </Route>
             <Route  path='dashboard' element={<Dashboard/>}/>
+            <Route  path='*' element={<PageNotFound/>}/>
           </Routes>
         </BrowserRouter>  
     </div>
